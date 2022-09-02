@@ -51,6 +51,95 @@ img {
     padding: 5px 10px;
 }
 
+.heading-style {
+    font-size: 50px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.1;
+}
+
+.sm-head {
+    font-size: 16px;
+    font-weight: 800;
+    color: #333;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/*=============== Drop Downs ===================*/
+.accordion {
+    margin-top: 50px;
+
+    * {
+        border: none;
+    }
+
+    .accordion-link {
+        font-size: 1.6rem;
+        color: #333;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .accordion-item {
+        background-color: transparent;
+    }
+
+    .sm-head {
+        font-weight: 700;
+    }
+
+    .accordion-link div {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .accordion-link .ion-md-arrow-down {
+        display: none;
+    }
+
+    object {
+        transform: rotate(45deg);
+        transition: all ease .2s;
+    }
+
+    .answer {
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 650ms;
+    }
+
+
+
+    .answer p {
+        padding: 0 10px;
+    }
+
+    .accordion-item:target .answer {
+        max-height: 20rem;
+    }
+
+    .accordion-item:target .accordion-link object {
+        transform: rotate(0);
+        transition: all ease .2s;
+    }
+
+    .accordion-item:target .accordion-link .ion-md-arrow-down {
+        display: block;
+    }
+}
 
 
 /*=========== Header Nav ===========*/
@@ -60,6 +149,7 @@ img {
     left: 0;
     z-index: 999;
     width: 100%;
+    transition: all ease .2s;
 
 
     .navbar-holder {
@@ -72,6 +162,7 @@ img {
 
     .logo {
         width: 136px;
+        transition: all ease .2s;
     }
 
     .logo img {
@@ -94,16 +185,19 @@ img {
         font-weight: 500;
         color: #fff;
         justify-content: flex-end;
+        transition: all ease .2s;
     }
-    .hamburger{
+
+    .hamburger {
         display: none;
-          .center {
+
+        .center {
             width: 35px;
-          }
-          
-          .center:before,
-          .center:after,
-          .center div {
+        }
+
+        .center:before,
+        .center:after,
+        .center div {
             background: #fff;
             content: "";
             display: block;
@@ -111,21 +205,46 @@ img {
             border-radius: 3px;
             margin: 7px 0;
             transition: 0.5s;
-          }
-          .center.active:before {
+        }
+
+        .center.active:before {
             transform: translateY(10px) rotate(135deg);
-          }
-          .center.active:after {
+        }
+
+        .center.active:after {
             transform: translateY(-10px) rotate(-135deg);
-          }
-          .center.active div {
+        }
+
+        .center.active div {
             transform: scale(0);
-          }
-          
+        }
+
     }
 }
 
+// .nav-bar.aft-scroll {
+//     background: #111;
 
+//     .logo {
+//         width: 80px;
+//         transition: all ease .2s;
+//     }
+
+//     ul {
+//         font-size: 14px;
+//         transition: all ease .2s;
+//     }
+
+//     .prm-btn {
+//         font-size: 14px;
+//         transition: all ease .2s;
+//     }
+// }
+
+.nav-bar.aft-scroll {
+    opacity: 0;
+    transition: all ease .3;
+}
 
 
 
@@ -155,14 +274,15 @@ img {
         background-size: cover;
         position: relative;
     }
-    .hero-right object{
+
+    .hero-right object {
         position: absolute;
         right: 0;
         bottom: 50%;
         width: 80%;
         transform: translateY(60%);
-        
-        &.for-mob{
+
+        &.for-mob {
             display: none;
         }
 
@@ -198,10 +318,11 @@ img {
 
 
 /*============== Featured Section ===============*/
-.feature-sec{
+.feature-sec {
     position: relative;
-    z-index: 999;
-    ul{
+    z-index: 998;
+
+    ul {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -211,24 +332,411 @@ img {
         color: #fff;
         font-weight: 600;
     }
-    img{
+
+    img {
         height: 20px;
+    }
+}
+
+
+/*=================== QR Section =======================*/
+.qr-sec {
+    padding: 70px 0;
+    background-image: url(assets/qr-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+    .qr-features {
+        padding: 20px 0;
+    }
+
+    .feat-box {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .feat-box img {
+        height: 40px;
+    }
+
+    .feat-box h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin-top: 20px;
+        line-height: 1;
+    }
+
+    .qr-img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 550px;
+    }
+}
+
+
+
+/*=============== Uses Section ===================*/
+.uses-sec {
+    padding: 70px 0;
+
+    .use-box {
+        margin: 20px 0;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 30px 10px #ddd;
+        padding: 30px 0;
+        transition: all ease .2s;
+        cursor: pointer;
+
+
+        img {
+            height: 60px;
+        }
+
+        .sm-head {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
+
+
+        &:hover {
+            transform: scale(1.3);
+            transition: all ease .2s;
+            position: relative;
+            z-index: 999;
+        }
+    }
+}
+
+
+
+/*=============== Social Section ================*/
+.social-sec {
+    padding: 70px 0;
+    background-image: url(assets/social-sec-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+        width: 450px;
+    }
+}
+
+
+
+/*================ Booking Section ================*/
+.booking-sec {
+    padding: 70px 0;
+    position: relative;
+    height: 550px;
+
+    .booking-img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 550px;
+    }
+}
+
+
+
+/*=============== Social Section ================*/
+.retain-sec {
+    padding: 70px 0;
+    background-image: url(assets/social-sec-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .retain-svg {
+        width: 100%;
     }
 }
 
 
 
 
+/*=============== Features Section ==================*/
+.feature-sec {
+    text-align: center;
+    padding: 70px 0;
+
+    .feat-heading {
+        max-width: 700px;
+        margin: auto;
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    .feat-holder {
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        .feat-card {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+    }
+
+    .feat-text {
+        max-width: 300px;
+    }
+
+    .feat-text p {
+        line-height: 1;
+        font-size: 13px;
+    }
+
+    .feat-text h3 {
+        font-weight: 700;
+    }
+
+    .feat-card object {
+        height: 35px;
+    }
+
+    .feat-card:nth-child(1) {
+        display: flex;
+        padding: 0 45px 45px 0;
+        align-items: flex-end;
+
+        .feat-text {
+            margin-left: auto;
+        }
+
+        object {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .feat-card:nth-child(2) {
+        display: flex;
+        padding-bottom: 60px;
+        align-items: flex-end;
+
+        .feat-text {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        object {
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+
+    .feat-card:nth-child(3) {
+        display: flex;
+        padding: 0 45px 45px;
+        ;
+        align-items: flex-end;
+
+        .feat-text {
+            margin-right: auto;
+        }
+
+        object {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+
+
+    .feat-card:nth-child(4) {
+        display: flex;
+        padding-right: 45px;
+        ;
+        align-items: center;
+
+        .feat-text {
+            margin: auto;
+        }
+
+        object {
+            margin-left: auto;
+            position: absolute;
+            bottom: 50%;
+            right: 0;
+            transform: translateY(50%);
+        }
+    }
+
+
+    .feat-card:nth-child(6) {
+        display: flex;
+        padding-left: 45px;
+        ;
+        align-items: center;
+
+        .feat-text {
+            margin: auto;
+        }
+
+        object {
+            margin-left: auto;
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            transform: translateY(50%);
+        }
+    }
+
+    .feat-card:nth-child(7) {
+        display: flex;
+        justify-content: flex-start;
+        padding: 45px 45px 0 0;
+
+        .feat-text {
+            margin-left: auto;
+        }
+
+        object {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+
+    .feat-card:nth-child(8) {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 60px;
+
+        .feat-text {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        object {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+
+    .feat-card:nth-child(9) {
+        display: flex;
+        justify-content: flex-start;
+        padding: 45px 0 0 45px;
+
+        .feat-text {
+            margin-right: auto;
+        }
+
+        object {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .feat-card:nth-child(5) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 120px;
+            height: auto;
+        }
+
+        .lines {
+            width: 150px;
+            height: 60px;
+            position: absolute;
+        }
+
+        .line {
+            height: 1px;
+            width: 50px;
+            transform-origin: 0 0;
+        }
+
+        .line:nth-child(1) {
+            position: absolute;
+            bottom: 100%;
+            right: 100%;
+            transform: rotate(45deg);
+            transform-origin: right;
+        }
+
+        .line:nth-child(2) {
+            position: absolute;
+            bottom: 150%;
+            left: 50%;
+            transform: rotate(90deg) translateX(-50%);
+        }
+
+        .line:nth-child(3) {
+            position: absolute;
+            bottom: 100%;
+            left: 100%;
+            transform: rotate(-45deg);
+        }
+
+        .line:nth-child(4) {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+        }
+
+        .line:nth-child(5) {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+        }
+
+        .line:nth-child(6) {
+            position: absolute;
+            top: 100%;
+            right: 100%;
+            transform: rotate(-45deg);
+            transform-origin: right;
+        }
+
+        .line:nth-child(7) {
+            position: absolute;
+            top: 150%;
+            left: 50%;
+            transform: rotate(90deg) translateX(-50%);
+        }
+
+        .line:nth-child(8) {
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            transform: rotate(45deg);
+        }
+    }
 
 
 
 
-
-
-
-
-
-
+}
 
 
 
@@ -247,67 +755,81 @@ img {
     }
 }
 
-@media only screen and (max-width: 991px){
-    .hero-sec{
+@media only screen and (max-width: 991px) {
+    .hero-sec {
         display: block;
         height: auto;
     }
-    .hero-sec .hero-right object{
+
+    .hero-sec .hero-right object {
         position: static;
         transform: none;
         width: 70%;
         display: block;
         margin: auto;
         margin-top: -180px;
-        
-        &.for-pc{
+
+        &.for-pc {
             display: none;
         }
-        &.for-mob{
+
+        &.for-mob {
             display: block;
         }
     }
-    .hero-sec .hero-left{
+
+    .hero-sec .hero-left {
         padding: 150px 0 220px 0;
     }
-    .hero-sec .hero-right{
+
+    .hero-sec .hero-right {
         background-image: none;
         padding-bottom: 70px;
     }
-    .hero-sec h1{
+
+    .hero-sec h1 {
         margin-left: auto;
         margin-right: auto;
         font-size: 40px;
     }
-    .hero-left .left-holder{
+
+    .hero-left .left-holder {
         text-align: center;
         padding: 0;
     }
-    .hero-sec .ach-text{
+
+    .hero-sec .ach-text {
         font-size: 14px;
     }
 }
 
-@media only screen and (max-width: 767px){
-    .nav-item{
+@media only screen and (max-width: 767px) {
+    .nav-item {
         display: none;
     }
-    .nav-bar .hamburger{
+
+    .nav-bar .hamburger {
         display: block;
     }
-    .right-holder, .left-holder{
+
+    .right-holder,
+    .left-holder {
         padding: 0;
     }
-    .nav-bar .left-holder{
+
+    .nav-bar .left-holder {
         display: block;
     }
-    .nav-bar .logo{
+
+    .nav-bar .logo {
         width: 100px;
     }
-    .prm-btn.white-border{
+
+    .prm-btn.white-border {
         font-size: 12px;
     }
-    .hero-sec h1{
+
+    .hero-sec h1 {
         font-size: 35px;
     }
 }
