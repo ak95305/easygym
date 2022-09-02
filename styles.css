@@ -251,11 +251,11 @@ p {
 }
 
 /*============== Featured Section ===============*/
-.feature-sec {
+.featured-sec {
   position: relative;
   z-index: 998;
 }
-.feature-sec ul {
+.featured-sec ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,7 +265,7 @@ p {
   color: #fff;
   font-weight: 600;
 }
-.feature-sec img {
+.featured-sec img {
   height: 20px;
 }
 
