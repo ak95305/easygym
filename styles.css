@@ -1,0 +1,259 @@
+@import url(fonts/gilroy/font-gilroy.css);
+/*================ Global CSS =================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+  font-size: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.left-holder {
+  padding-left: 100px;
+}
+
+.right-holder {
+  padding-right: 100px;
+}
+
+.prm-btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 30px;
+  background: #1562D9;
+  color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.prm-btn.white-border {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+/*=========== Header Nav ===========*/
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+.nav-bar .navbar-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+}
+.nav-bar .logo {
+  width: 136px;
+}
+.nav-bar .logo img {
+  height: 100%;
+}
+.nav-bar .left-holder {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-bar .left-holder ul,
+.nav-bar .nav-right ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  justify-content: flex-end;
+}
+.nav-bar .hamburger {
+  display: none;
+}
+.nav-bar .hamburger .center {
+  width: 35px;
+}
+.nav-bar .hamburger .center:before,
+.nav-bar .hamburger .center:after,
+.nav-bar .hamburger .center div {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  margin: 7px 0;
+  transition: 0.5s;
+}
+.nav-bar .hamburger .center.active:before {
+  transform: translateY(10px) rotate(135deg);
+}
+.nav-bar .hamburger .center.active:after {
+  transform: translateY(-10px) rotate(-135deg);
+}
+.nav-bar .hamburger .center.active div {
+  transform: scale(0);
+}
+
+/*================ Hero Section ===============*/
+.hero-sec {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+.hero-sec .hero-left {
+  flex-basis: 60%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-image: url(assets/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+}
+.hero-sec .hero-right {
+  flex-basis: 40%;
+  background-image: url(assets/hero-right-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-sec .hero-right object {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  width: 80%;
+  transform: translateY(60%);
+}
+.hero-sec .hero-right object.for-mob {
+  display: none;
+}
+.hero-sec h1 {
+  font-size: 50px;
+  font-weight: 600;
+  max-width: 550px;
+  margin-bottom: 35px;
+}
+.hero-sec .grey-btn {
+  margin-left: 10px;
+  color: #AAA;
+  font-weight: 600;
+}
+.hero-sec .ach-text {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+}
+.hero-sec .ach-text b {
+  font-weight: 600;
+}
+
+/*============== Featured Section ===============*/
+.feature-sec {
+  position: relative;
+  z-index: 999;
+}
+.feature-sec ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background: #111;
+  height: 50px;
+  color: #fff;
+  font-weight: 600;
+}
+.feature-sec img {
+  height: 20px;
+}
+
+/*=============== Media Queries =================*/
+@media only screen and (max-width: 1199px) {
+  .left-holder {
+    padding-left: 40px;
+  }
+  .right-holder {
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hero-sec {
+    display: block;
+    height: auto;
+  }
+  .hero-sec .hero-right object {
+    position: static;
+    transform: none;
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: -180px;
+  }
+  .hero-sec .hero-right object.for-pc {
+    display: none;
+  }
+  .hero-sec .hero-right object.for-mob {
+    display: block;
+  }
+  .hero-sec .hero-left {
+    padding: 150px 0 220px 0;
+  }
+  .hero-sec .hero-right {
+    background-image: none;
+    padding-bottom: 70px;
+  }
+  .hero-sec h1 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+  }
+  .hero-left .left-holder {
+    text-align: center;
+    padding: 0;
+  }
+  .hero-sec .ach-text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .nav-item {
+    display: none;
+  }
+  .nav-bar .hamburger {
+    display: block;
+  }
+  .right-holder, .left-holder {
+    padding: 0;
+  }
+  .nav-bar .left-holder {
+    display: block;
+  }
+  .nav-bar .logo {
+    width: 100px;
+  }
+  .prm-btn.white-border {
+    font-size: 12px;
+  }
+  .hero-sec h1 {
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=styles.css.map */
