@@ -74,7 +74,7 @@ $(window).on('resize scroll', function () {
                 loop: false, // Optional
                 autoplay: true, // Optional
             })
-            console.log(document.querySelectorAll('#retain-svg svg'));
+            // console.log(document.querySelectorAll('#retain-svg svg'));
         }
     }
 
