@@ -1,9 +1,3 @@
-// AOS
-AOS.init();
-
-
-
-
 // Hamburger
 let hamIcon = document.querySelector('.hamburger .center');
 let navMenu = document.querySelector('.navbar-mob');
@@ -83,3 +77,8 @@ $(window).on('resize scroll', function () {
 
 
 
+
+
+
+// AOS
+AOS.init();

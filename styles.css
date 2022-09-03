@@ -76,7 +76,7 @@ p {
 
 /*================= Loader =====================*/
 #preloader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -98,14 +98,17 @@ p {
   0% {
     opacity: 1;
     display: block;
+    z-index: 9999;
   }
   90% {
     opacity: 0;
     display: block;
+    z-index: 9999;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 
@@ -113,14 +116,17 @@ p {
   0% {
     opacity: 1;
     display: block;
+    z-index: 9999;
   }
   90% {
     opacity: 0;
     display: block;
+    z-index: 9999;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 /***************************************************
