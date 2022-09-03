@@ -435,6 +435,8 @@ p {
         top: 50%;
         transform: translateY(-50%);
         width: 550px;
+        margin-left: -400px;
+        transition: all ease .01s;
     }
     .qr-img-mob{
         display: none;
@@ -540,7 +542,7 @@ p {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        width: 550px;
+        width: 650px;
     }
     .booking-img-full{
         display: none;
