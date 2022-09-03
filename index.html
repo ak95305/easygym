@@ -720,9 +720,13 @@
     <!-- Loader Js -->
     <script>
         // Loader
+        document.body.style.overflow = 'hidden';
+        document.body.style.height = '100vh';
         setTimeout(() => {
             jQuery(document).ready(function () {
                 jQuery("#preloader").addClass('remove');
+                document.body.style.overflow = 'auto';
+                document.body.style.height = 'auto';
             });
         }, 3000);
     </script>
