@@ -200,6 +200,31 @@ p {
   transition: all ease 0.3;
 }
 
+/*================ Mobile Menu ===============*/
+.navbar-mob ul {
+  width: 60%;
+  height: 100vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: -60%;
+  color: #fff;
+  z-index: 9999;
+  padding: 100px 50px;
+  transition: all ease 0.3s;
+}
+.navbar-mob ul li {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+}
+.navbar-mob.active ul {
+  transition: all ease 0.3s;
+  left: 0;
+}
+
 /*================ Hero Section ===============*/
 .hero-sec {
   display: flex;
