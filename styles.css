@@ -8,6 +8,10 @@
   font-size: 100%;
 }
 
+#wrapper > div {
+  overflow: hidden;
+}
+
 ul,
 li {
   list-style: none;
@@ -266,12 +270,34 @@ p {
   font-weight: 600;
 }
 .featured-sec img {
-  height: 20px;
+  max-height: 20px;
+}
+.featured-sec.mob {
+  display: none;
+  padding: 100px 0;
+}
+.featured-sec.mob .row {
+  background-color: #fff;
+  color: #333;
+  margin-top: 50px;
+}
+.featured-sec.mob .row div {
+  text-align: center;
+  padding: 20px 0;
+}
+.featured-sec.mob img {
+  max-height: 30px;
+}
+.featured-sec.mob h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #aaa;
 }
 
 /*=================== QR Section =======================*/
 .qr-sec {
-  padding: 70px 0;
+  padding: 100px 0;
   background-image: url(assets/qr-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -301,6 +327,9 @@ p {
   transform: translateY(-50%);
   width: 550px;
 }
+.qr-sec .qr-img-mob {
+  display: none;
+}
 
 /*=============== Uses Section ===================*/
 .uses-sec {
@@ -314,20 +343,52 @@ p {
   padding: 30px 0;
   transition: all ease 0.2s;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .uses-sec .use-box img {
   height: 60px;
+  transition: all ease 0.2s;
 }
 .uses-sec .use-box .sm-head {
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 30px;
+  transition: all ease 0.2s;
+}
+.uses-sec .use-box::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: #1562D9;
+  opacity: 0.9;
+  transition: all ease 0.3s;
+  border-radius: 50%;
+  z-index: -1;
 }
 .uses-sec .use-box:hover {
-  transform: scale(1.3);
+  transform: scale(1.05);
   transition: all ease 0.2s;
   position: relative;
   z-index: 999;
+}
+.uses-sec .use-box:hover .sm-head {
+  color: #fff;
+  font-weight: 700;
+  transition: all ease 0.2s;
+}
+.uses-sec .use-box:hover img {
+  transition: all ease 0.2s;
+  filter: brightness(0) invert(1);
+}
+.uses-sec .use-box:hover::after {
+  width: 250px;
+  height: 250px;
+  transition: all ease 0.3s;
 }
 
 /*=============== Social Section ================*/
@@ -345,7 +406,7 @@ p {
 .booking-sec {
   padding: 70px 0;
   position: relative;
-  height: 550px;
+  min-height: 550px;
 }
 .booking-sec .booking-img {
   position: absolute;
@@ -353,6 +414,11 @@ p {
   top: 50%;
   transform: translateY(-50%);
   width: 550px;
+}
+.booking-sec .booking-img-full {
+  display: none;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 /*=============== Social Section ================*/
@@ -585,6 +651,94 @@ p {
   transform: rotate(45deg);
 }
 
+/*=============== Testimonial Section ====================*/
+.testimonial-sec {
+  padding: 70px 0 0 0;
+}
+.testimonial-sec h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.testimonial-sec .test-box {
+  background-color: #fff;
+  box-shadow: 0 0 20px 2px #cecece;
+  margin: 20px 0;
+  padding: 20px 10px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.testimonial-sec .test-box object {
+  height: 30px;
+  margin-bottom: 20px;
+}
+.testimonial-sec .test-bottom {
+  width: 100%;
+  height: 200px;
+  background: url(assets/test-bottom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: -100px;
+}
+
+/*================== Footer Section =================*/
+footer {
+  padding: 50px 0;
+  background-color: #111;
+}
+footer h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+footer p,
+footer li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+}
+footer .prm-btn {
+  font-size: 12px;
+  margin-top: 20px;
+}
+footer .row > div > div {
+  margin-bottom: 40px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer .cnt-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .cnt-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer object {
+  width: 18px;
+  display: inline-block;
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .social i {
+  font-size: 18px;
+}
+footer input.form-control, footer input.form-control:active, footer input.form-control:focus {
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 /*=============== Media Queries =================*/
 @media only screen and (max-width: 1199px) {
   .left-holder {
@@ -592,6 +746,9 @@ p {
   }
   .right-holder {
     padding-right: 40px;
+  }
+  .qr-sec .qr-img {
+    width: 480px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -632,6 +789,31 @@ p {
   .hero-sec .ach-text {
     font-size: 14px;
   }
+  .featured-sec.pc {
+    display: none;
+  }
+  .featured-sec.mob {
+    display: block;
+  }
+  .qr-img {
+    display: none;
+  }
+  .qr-sec .qr-img-mob {
+    display: block;
+    width: 500px;
+    margin: auto;
+    transform: translateX(100px);
+  }
+  .qr-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .booking-sec .booking-img {
+    width: 500px;
+  }
+  .retain-sec .retain-svg {
+    margin-bottom: 40px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .nav-item {
@@ -655,5 +837,43 @@ p {
   }
   .hero-sec h1 {
     font-size: 35px;
+  }
+  .heading-style {
+    font-size: 40px;
+  }
+  .qr-sec p {
+    max-width: 350px;
+    margin: auto;
+  }
+  .booking-sec .booking-img {
+    display: none;
+  }
+  .booking-sec .booking-img-full {
+    display: block;
+  }
+  .feature-sec .feat-holder {
+    grid-template-columns: 1fr 1fr;
+  }
+  .feature-sec .feat-holder .feat-card {
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .feature-sec .feat-holder .feat-card object {
+    position: static;
+    transform: none;
+    margin: auto;
+  }
+  .feature-sec .feat-holder .feat-card .feat-text {
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .qr-sec .qr-img-mob {
+    transform: none;
+  }
+  .feature-sec .feat-holder {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=styles.css.map */
