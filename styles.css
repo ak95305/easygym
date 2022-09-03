@@ -750,6 +750,9 @@ footer input.form-control, footer input.form-control:active, footer input.form-c
   .qr-sec .qr-img {
     width: 480px;
   }
+  .testimonial-sec h1 {
+    font-size: 30px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .hero-sec {
