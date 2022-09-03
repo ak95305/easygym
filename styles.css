@@ -74,6 +74,19 @@ p {
   margin: 0;
 }
 
+/*================= Loader =====================*/
+#preloader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #fff;
+  color: #333;
+}
+
 /*=============== Drop Downs ===================*/
 .accordion {
   margin-top: 50px;
@@ -115,18 +128,18 @@ p {
   position: relative;
   transition: max-height 650ms;
 }
+.accordion input {
+  display: none;
+}
 .accordion .answer p {
   padding: 0 10px;
 }
-.accordion .accordion-item:target .answer {
+.accordion .accordion-item input:checked ~ .answer {
   max-height: 20rem;
 }
-.accordion .accordion-item:target .accordion-link object {
+.accordion .accordion-item input:checked ~ .accordion-link object {
   transform: rotate(0);
   transition: all ease 0.2s;
-}
-.accordion .accordion-item:target .accordion-link .ion-md-arrow-down {
-  display: block;
 }
 
 /*=========== Header Nav ===========*/

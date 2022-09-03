@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <div id="preloader">Loading...</div>
 
     <div id="wrapper">
 
@@ -69,7 +70,7 @@
             </div>
         </div>
         <!-- Nav Header Ends-->
-        
+
 
         <!-- Mobile Menu Ends-->
         <div class="navbar-mob">
@@ -283,13 +284,14 @@
 
 
                         <div class="accordion">
-                            <div class="accordion-item" id="book-ques1">
-                                <a class="accordion-link" href="#book-ques1">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques1">
+                                <label class="accordion-link" for="book-ques1">
                                     <div class="flex">
                                         <h3 class="sm-head">All-embracing Sign-up Form</h3>
                                         <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                     </div>
-                                </a>
+                                </label>
                                 <div class="answer">
                                     <p> Let the customers see and choose everything they need in a comprehensive sign-up
                                         form on your website. The details are captured in the gym management system and
@@ -298,13 +300,14 @@
                                 </div>
                                 <hr>
                             </div>
-                            <div class="accordion-item" id="book-ques2">
-                                <a class="accordion-link" href="#book-ques2">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques2">
+                                <label class="accordion-link" for="book-ques2">
                                     <div class="flex">
                                         <h3 class="sm-head">Group Class and Training Booking</h3>
                                         <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                     </div>
-                                </a>
+                                </label>
                                 <div class="answer">
                                     <p>Provide your customers the possibility to book their group classes, personal
                                         training or any other service that your gym provides through the website or the
@@ -312,13 +315,14 @@
                                 </div>
                                 <hr>
                             </div>
-                            <div class="accordion-item" id="book-ques3">
-                                <a class="accordion-link" href="#book-ques3">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques3">
+                                <label class="accordion-link" for="book-ques3">
                                     <div class="flex">
                                         <h3 class="sm-head">Client’s Vital Information</h3>
                                         <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                     </div>
-                                </a>
+                                </label>
                                 <div class="answer">
                                     <p>Let the clients be focused on their growth and produce more results by showing
                                         them all the important information related to their workout plan, diet plan,
@@ -354,13 +358,14 @@
 
 
                             <div class="accordion">
-                                <div class="accordion-item" id="question1">
-                                    <a class="accordion-link" href="#question1">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question1">
+                                    <label class="accordion-link" for="question1">
                                         <div class="flex">
                                             <h3 class="sm-head">All-embracing Sign-up Form</h3>
                                             <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                         </div>
-                                    </a>
+                                    </label>
                                     <div class="answer">
                                         <p> Let the customers see and choose everything they need in a comprehensive
                                             sign-up
@@ -371,13 +376,14 @@
                                     </div>
                                     <hr>
                                 </div>
-                                <div class="accordion-item" id="question2">
-                                    <a class="accordion-link" href="#question2">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question2">
+                                    <label class="accordion-link" for="question2">
                                         <div class="flex">
                                             <h3 class="sm-head">Group Class and Training Booking</h3>
                                             <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                         </div>
-                                    </a>
+                                    </label>
                                     <div class="answer">
                                         <p>Provide your customers the possibility to book their group classes, personal
                                             training or any other service that your gym provides through the website or
@@ -386,13 +392,14 @@
                                     </div>
                                     <hr>
                                 </div>
-                                <div class="accordion-item" id="question3">
-                                    <a class="accordion-link" href="#question3">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question3">
+                                    <label class="accordion-link" for="question3">
                                         <div class="flex">
                                             <h3 class="sm-head">Client’s Vital Information</h3>
                                             <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
                                         </div>
-                                    </a>
+                                    </label>
                                     <div class="answer">
                                         <p>Let the clients be focused on their growth and produce more results by
                                             showing
@@ -637,6 +644,7 @@
 
 
 
+
     <!-- Jquery JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -648,6 +656,16 @@
 
     <!-- Lottie JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+
+    <!-- Loader Js -->
+    <script>
+        // Loader
+        setTimeout(() => {
+            jQuery(document).ready(function () {
+                jQuery("#preloader").remove();
+            });
+        }, 5000);
+    </script>
 
     <!-- Script JS -->
     <script src="script.js"></script>

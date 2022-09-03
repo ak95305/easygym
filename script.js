@@ -63,7 +63,7 @@ $(window).on('resize scroll', function () {
 
     // if ($('.retain-sec').isInViewport()) {
 
-        
+
     //     // console.log($('#retain-svg')[0]);
     //     if(!$('#retain-svg > svg')[0] && $(window).scrollTop() > $('.retain-sec').offset().top-150){
     //         // Retain Client SVG
@@ -79,6 +79,7 @@ $(window).on('resize scroll', function () {
     // }
 
 });
+
 
 
 
