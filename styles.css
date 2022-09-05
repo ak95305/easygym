@@ -1772,4 +1772,13 @@ footer input.form-control:focus {
 .feat-hero-bg {
     height: auto;
   }
+}
+@media only screen and (min-height: 900px) {
+  .feat-hero,
+.feat-hero-bg {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
