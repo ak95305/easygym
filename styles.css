@@ -1737,7 +1737,7 @@ footer input.form-control:focus {
     text-align: center;
   }
   .feat-hero .feat-hero-bg {
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1746,7 +1746,7 @@ footer input.form-control:focus {
     padding-top: 80px;
   }
   .feat-hero {
-    height: 100vh;
+    height: auto;
   }
   .feat-sec .feat-sec-img-big {
     display: none;
