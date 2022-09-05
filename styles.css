@@ -1758,4 +1758,9 @@ footer input.form-control:focus {
     color: #fff;
     text-align: center;
   }
+}
+@media only screen and (min-height: 768px) {
+  .feat-hero, .feat-hero-bg {
+    height: auto;
+  }
 }/*# sourceMappingURL=styles.css.map */

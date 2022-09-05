@@ -1831,6 +1831,8 @@ footer {
     }
 }
 
-@media only screen and (min-width: 1440px){
-    
+@media only screen and (min-height: 768px){
+    .feat-hero, .feat-hero-bg{
+        height: auto;
+    }
 }
