@@ -1605,6 +1605,7 @@ footer input.form-control:focus {
 /*==================================================================================*/
 .feat-hero {
   height: 115vh;
+  overflow: hidden;
 }
 .feat-hero .feat-hero-bg {
   height: 75vh;
@@ -1623,6 +1624,13 @@ footer input.form-control:focus {
 }
 .feat-hero .feat-hero-bg h1 span.blue-text {
   color: #488DF8;
+  position: relative;
+}
+.feat-hero .feat-hero-bg h1 span.blue-text .feat-head-lines {
+  position: absolute;
+  bottom: 54%;
+  left: 100%;
+  width: 40px;
 }
 .feat-hero .feat-hero-img {
   width: 900px;
