@@ -1627,8 +1627,7 @@ footer input.form-control:focus {
 .feat-hero .feat-hero-img {
   width: 900px;
   display: block;
-  margin: auto;
-  margin-top: -30px;
+  margin: -30px auto 0 auto;
 }
 .feat-hero .feat-stat-img {
   position: absolute;
@@ -1673,7 +1672,8 @@ footer input.form-control:focus {
   padding: 70px 0;
   background: #1562D9;
 }
-.feat-clients h1, .feat-clients p {
+.feat-clients h1,
+.feat-clients p {
   color: #fff;
 }
 
@@ -1760,7 +1760,17 @@ footer input.form-control:focus {
   }
 }
 @media only screen and (min-height: 768px) {
-  .feat-hero, .feat-hero-bg {
+  .feat-hero,
+.feat-hero-bg {
     height: auto;
+  }
+}
+@media only screen and (min-height: 900px) {
+  .feat-hero,
+.feat-hero-bg {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */
