@@ -25,6 +25,7 @@ a:hover,
 a:focus {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 img {
@@ -598,7 +599,7 @@ p {
         display: none;
     }
 
-    object {
+    svg {
         transform: rotate(45deg);
         transition: all ease .2s;
     }
@@ -623,7 +624,7 @@ p {
         max-height: 20rem;
     }
 
-    .accordion-item input:checked~.accordion-link object {
+    .accordion-item input:checked~.accordion-link svg {
         transform: rotate(0);
         transition: all ease .2s;
     }
@@ -638,6 +639,7 @@ p {
     z-index: 999;
     width: 100%;
     transition: all ease .2s;
+    overflow: visible !important;
 
 
     .navbar-holder {
@@ -674,6 +676,55 @@ p {
         color: #fff;
         justify-content: flex-end;
         transition: all ease .2s;
+
+        li {
+            position: relative;
+        }
+
+
+
+        .sub-menu-holder {
+            position: absolute;
+            top: 100%;
+            width: fit-content;
+            width: calc(100% + 150px);
+            max-height: 0px;
+            overflow: hidden;
+            transition: all ease-out .5s;
+
+            .sub-menu {
+                background-color: #fff;
+                display: block;
+                padding: 20px;
+
+                li {
+                    margin: 5px;
+
+                    a {
+                        display: block;
+                        transition: all ease .2s;
+
+                        &:hover {
+                            transform: translateX(10px);
+                            transition: all ease .2s;
+                        }
+                    }
+                }
+
+
+                a {
+                    color: #333;
+                }
+            }
+
+
+            &.active {
+                box-shadow: 0 0 10px 2px #666;
+                max-height: 1000px;
+                transition: all ease-in .5s;
+            }
+        }
+
     }
 
     .hamburger {
@@ -740,7 +791,7 @@ p {
 /*================ Mobile Menu ===============*/
 .navbar-mob {
 
-    ul {
+    >ul {
         width: 60%;
         height: 100vh;
         background: #fff;
@@ -759,6 +810,29 @@ p {
             text-align: center;
             margin: 20px 0;
         }
+        #mob-drop{
+            display: none;
+        }
+        #mob-drop:checked ~ .mob-menu-holder{
+            max-height: 1000px;
+            transition: all ease .2s;
+        }
+
+        .mob-menu-holder {
+            max-height: 0;
+            overflow: hidden;
+            transition: all ease .2s;
+
+            li {
+                margin: 0px 0;
+                a {
+                    font-size: 14px;
+                    color: #666;
+
+                }
+            }
+        }
+
     }
 
     &.active {
@@ -1354,7 +1428,7 @@ p {
         flex-direction: column;
         align-items: flex-start;
 
-        object {
+        svg {
             height: 30px;
             margin-bottom: 20px;
         }
@@ -1563,6 +1637,7 @@ footer {
 
     .nav-bar .left-holder {
         display: block;
+        width: 95px;
     }
 
     .nav-bar .logo {
@@ -1870,5 +1945,420 @@ footer {
         justify-content: center;
         padding: 0;
         flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Tutorials Page =====================================*/
+/*==================================================================================*/
+.tuts-hero {
+    height: 100vh;
+    background: url(assets/features/feat-hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    display: flex;
+    align-items: center;
+
+    .heading-style {
+        color: #fff;
+        font-weight: 700;
+
+        .blue-text {
+            color: #1562D9;
+        }
+    }
+
+    p {
+        color: #fff;
+    }
+}
+
+
+.tuts-sec {
+    padding: 100px 0;
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        color: #333;
+        line-height: 1;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #666;
+        line-height: 1.2;
+    }
+
+    img {
+        border-radius: 3px;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .tuts-card {
+        margin-bottom: 50px;
+    }
+
+    .tuts-img {
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background: #488DF8;
+            padding: 0 18px;
+            border-radius: 2px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================*/
+/*============================== USA Page =====================================*/
+/*==================================================================================*/
+#usa-page,
+.cnt-page {
+
+    .nav-bar .left-holder ul,
+    .nav-bar .nav-right ul {
+        color: #333;
+        font-weight: 600;
+
+        .prm-btn {
+            border-width: 2px;
+            border-color: #333;
+            color: #333;
+            font-weight: 600;
+        }
+
+    }
+
+    .nav-bar .hamburger .center:before,
+    .nav-bar .hamburger .center:after,
+    .nav-bar .hamburger .center div {
+        background: #333;
+    }
+
+    .hero-sec {
+        height: 100vh;
+        background-image: url(assets/country/usa-hero-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        position: relative;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .header-text {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 0;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .heading-style {
+                margin: auto;
+                font-weight: 800;
+                color: #333;
+                font-size: 75px;
+                line-height: 1;
+
+                .cnt-text {
+                    color: #BF0A30;
+                }
+            }
+
+            .prm-btn {
+                background-color: #BF0A30;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        .cnt-hero-img {
+            width: 700px;
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #BF0A30;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #BF0A30;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-us-bottom.png);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .cnt-page .hero-sec {
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .cnt-page .hero-sec .header-text .heading-style {
+        font-size: 60px;
+    }
+}
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Africa Page =====================================*/
+/*==================================================================================*/
+#africa-page {
+    .hero-sec {
+        background-image: url(assets/country/africa-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #00843E;
+            }
+
+            .prm-btn {
+                background-color: #00843E;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #00843E;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #00843E;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-af-bottom.png);
+    }
+}
+
+
+
+
+/*==================================================================================*/
+/*============================== Canada Page =====================================*/
+/*==================================================================================*/
+#canada-page {
+    .hero-sec {
+        background-image: url(assets/country/canada-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #D80621;
+            }
+
+            .prm-btn {
+                background-color: #D80621;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #D80621;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #D80621;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-ca-bottom.png);
+    }
+}
+
+
+
+
+/*==================================================================================*/
+/*============================== Qatar Page =====================================*/
+/*==================================================================================*/
+#qatar-page {
+    .hero-sec {
+        background-image: url(assets/country/qatar-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #8A1538;
+            }
+
+            .prm-btn {
+                background-color: #8A1538;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #8A1538;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #8A1538;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-qt-bottom.png);
+    }
+}
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Malaysia Page =====================================*/
+/*==================================================================================*/
+#malaysia-page {
+    .hero-sec {
+        background-image: url(assets/country/malaysia-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #0032A0;
+            }
+
+            .prm-btn {
+                background-color: #0032A0;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #0032A0;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #0032A0;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-ml-bottom.png);
+    }
+}
+
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Singapore Page =====================================*/
+/*==================================================================================*/
+#singapore-page {
+    .hero-sec {
+        background-image: url(assets/country/singapore-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #EE2536;
+            }
+
+            .prm-btn {
+                background-color: #EE2536;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #EE2536;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #EE2536;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(assets/country/test-sg-bottom.png);
     }
 }

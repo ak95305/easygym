@@ -24,6 +24,7 @@ a:hover,
 a:focus {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -796,7 +797,7 @@ p {
 .accordion .accordion-link .ion-md-arrow-down {
   display: none;
 }
-.accordion object {
+.accordion svg {
   transform: rotate(45deg);
   transition: all ease 0.2s;
 }
@@ -815,7 +816,7 @@ p {
 .accordion .accordion-item input:checked ~ .answer {
   max-height: 20rem;
 }
-.accordion .accordion-item input:checked ~ .accordion-link object {
+.accordion .accordion-item input:checked ~ .accordion-link svg {
   transform: rotate(0);
   transition: all ease 0.2s;
 }
@@ -828,6 +829,7 @@ p {
   z-index: 999;
   width: 100%;
   transition: all ease 0.2s;
+  overflow: visible !important;
 }
 .nav-bar .navbar-holder {
   display: flex;
@@ -858,6 +860,52 @@ p {
   color: #fff;
   justify-content: flex-end;
   transition: all ease 0.2s;
+}
+.nav-bar .left-holder ul li,
+.nav-bar .nav-right ul li {
+  position: relative;
+}
+.nav-bar .left-holder ul .sub-menu-holder,
+.nav-bar .nav-right ul .sub-menu-holder {
+  position: absolute;
+  top: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: calc(100% + 150px);
+  max-height: 0px;
+  overflow: hidden;
+  transition: all ease-out 0.5s;
+}
+.nav-bar .left-holder ul .sub-menu-holder .sub-menu,
+.nav-bar .nav-right ul .sub-menu-holder .sub-menu {
+  background-color: #fff;
+  display: block;
+  padding: 20px;
+}
+.nav-bar .left-holder ul .sub-menu-holder .sub-menu li,
+.nav-bar .nav-right ul .sub-menu-holder .sub-menu li {
+  margin: 5px;
+}
+.nav-bar .left-holder ul .sub-menu-holder .sub-menu li a,
+.nav-bar .nav-right ul .sub-menu-holder .sub-menu li a {
+  display: block;
+  transition: all ease 0.2s;
+}
+.nav-bar .left-holder ul .sub-menu-holder .sub-menu li a:hover,
+.nav-bar .nav-right ul .sub-menu-holder .sub-menu li a:hover {
+  transform: translateX(10px);
+  transition: all ease 0.2s;
+}
+.nav-bar .left-holder ul .sub-menu-holder .sub-menu a,
+.nav-bar .nav-right ul .sub-menu-holder .sub-menu a {
+  color: #333;
+}
+.nav-bar .left-holder ul .sub-menu-holder.active,
+.nav-bar .nav-right ul .sub-menu-holder.active {
+  box-shadow: 0 0 10px 2px #666;
+  max-height: 1000px;
+  transition: all ease-in 0.5s;
 }
 .nav-bar .hamburger {
   display: none;
@@ -892,7 +940,7 @@ p {
 }
 
 /*================ Mobile Menu ===============*/
-.navbar-mob ul {
+.navbar-mob > ul {
   width: 60%;
   height: 100vh;
   background: #fff;
@@ -904,12 +952,31 @@ p {
   padding: 100px 50px;
   transition: all ease 0.3s;
 }
-.navbar-mob ul li {
+.navbar-mob > ul li {
   font-size: 20px;
   color: #333;
   font-weight: 600;
   text-align: center;
   margin: 20px 0;
+}
+.navbar-mob > ul #mob-drop {
+  display: none;
+}
+.navbar-mob > ul #mob-drop:checked ~ .mob-menu-holder {
+  max-height: 1000px;
+  transition: all ease 0.2s;
+}
+.navbar-mob > ul .mob-menu-holder {
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease 0.2s;
+}
+.navbar-mob > ul .mob-menu-holder li {
+  margin: 0px 0;
+}
+.navbar-mob > ul .mob-menu-holder li a {
+  font-size: 14px;
+  color: #666;
 }
 .navbar-mob.active ul {
   transition: all ease 0.3s;
@@ -1387,7 +1454,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
-.testimonial-sec .test-box object {
+.testimonial-sec .test-box svg {
   height: 30px;
   margin-bottom: 20px;
 }
@@ -1551,6 +1618,7 @@ footer input.form-control:focus {
   }
   .nav-bar .left-holder {
     display: block;
+    width: 95px;
   }
   .nav-bar .logo {
     width: 100px;
@@ -1781,4 +1849,282 @@ footer input.form-control:focus {
     padding: 0;
     flex-direction: column;
   }
+}
+/*==================================================================================*/
+/*============================== Tutorials Page =====================================*/
+/*==================================================================================*/
+.tuts-hero {
+  height: 100vh;
+  background: url(assets/features/feat-hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  display: flex;
+  align-items: center;
+}
+.tuts-hero .heading-style {
+  color: #fff;
+  font-weight: 700;
+}
+.tuts-hero .heading-style .blue-text {
+  color: #1562D9;
+}
+.tuts-hero p {
+  color: #fff;
+}
+
+.tuts-sec {
+  padding: 100px 0;
+}
+.tuts-sec h2 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+  margin-top: 10px;
+}
+.tuts-sec p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  line-height: 1.2;
+}
+.tuts-sec img {
+  border-radius: 3px;
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.tuts-sec .tuts-card {
+  margin-bottom: 50px;
+}
+.tuts-sec .tuts-img {
+  position: relative;
+  cursor: pointer;
+}
+.tuts-sec .tuts-img svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: #488DF8;
+  padding: 0 18px;
+  border-radius: 2px;
+}
+
+/*==================================================================================*/
+/*============================== USA Page =====================================*/
+/*==================================================================================*/
+#usa-page .nav-bar .left-holder ul,
+#usa-page .nav-bar .nav-right ul,
+.cnt-page .nav-bar .left-holder ul,
+.cnt-page .nav-bar .nav-right ul {
+  color: #333;
+  font-weight: 600;
+}
+#usa-page .nav-bar .left-holder ul .prm-btn,
+#usa-page .nav-bar .nav-right ul .prm-btn,
+.cnt-page .nav-bar .left-holder ul .prm-btn,
+.cnt-page .nav-bar .nav-right ul .prm-btn {
+  border-width: 2px;
+  border-color: #333;
+  color: #333;
+  font-weight: 600;
+}
+#usa-page .nav-bar .hamburger .center:before,
+#usa-page .nav-bar .hamburger .center:after,
+#usa-page .nav-bar .hamburger .center div,
+.cnt-page .nav-bar .hamburger .center:before,
+.cnt-page .nav-bar .hamburger .center:after,
+.cnt-page .nav-bar .hamburger .center div {
+  background: #333;
+}
+#usa-page .hero-sec,
+.cnt-page .hero-sec {
+  height: 100vh;
+  background-image: url(assets/country/usa-hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  position: relative;
+}
+#usa-page .hero-sec .container,
+.cnt-page .hero-sec .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+#usa-page .hero-sec .header-text,
+.cnt-page .hero-sec .header-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+#usa-page .hero-sec .header-text p,
+.cnt-page .hero-sec .header-text p {
+  margin-bottom: 20px;
+}
+#usa-page .hero-sec .header-text .heading-style,
+.cnt-page .hero-sec .header-text .heading-style {
+  margin: auto;
+  font-weight: 800;
+  color: #333;
+  font-size: 75px;
+  line-height: 1;
+}
+#usa-page .hero-sec .header-text .heading-style .cnt-text,
+.cnt-page .hero-sec .header-text .heading-style .cnt-text {
+  color: #BF0A30;
+}
+#usa-page .hero-sec .header-text .prm-btn,
+.cnt-page .hero-sec .header-text .prm-btn {
+  background-color: #BF0A30;
+}
+#usa-page .hero-sec .header-text .prm-btn:hover,
+.cnt-page .hero-sec .header-text .prm-btn:hover {
+  color: #fff;
+}
+#usa-page .hero-sec .cnt-hero-img,
+.cnt-page .hero-sec .cnt-hero-img {
+  width: 700px;
+}
+#usa-page .accordion-link svg path,
+.cnt-page .accordion-link svg path {
+  fill: #BF0A30;
+}
+#usa-page .test-box svg path,
+.cnt-page .test-box svg path {
+  fill: #BF0A30;
+}
+#usa-page .test-bottom,
+.cnt-page .test-bottom {
+  background-image: url(assets/country/test-us-bottom.png);
+}
+
+@media only screen and (max-width: 767px) {
+  .cnt-page .hero-sec {
+    height: auto;
+    padding-top: 120px;
+  }
+  .cnt-page .hero-sec .header-text .heading-style {
+    font-size: 60px;
+  }
+}
+/*==================================================================================*/
+/*============================== Africa Page =====================================*/
+/*==================================================================================*/
+#africa-page .hero-sec {
+  background-image: url(assets/country/africa-hero-bg.png);
+}
+#africa-page .hero-sec .header-text .cnt-text {
+  color: #00843E;
+}
+#africa-page .hero-sec .header-text .prm-btn {
+  background-color: #00843E;
+}
+#africa-page .accordion-link svg path {
+  fill: #00843E;
+}
+#africa-page .test-box svg path {
+  fill: #00843E;
+}
+#africa-page .test-bottom {
+  background-image: url(assets/country/test-af-bottom.png);
+}
+
+/*==================================================================================*/
+/*============================== Canada Page =====================================*/
+/*==================================================================================*/
+#canada-page .hero-sec {
+  background-image: url(assets/country/canada-hero-bg.png);
+}
+#canada-page .hero-sec .header-text .cnt-text {
+  color: #D80621;
+}
+#canada-page .hero-sec .header-text .prm-btn {
+  background-color: #D80621;
+}
+#canada-page .accordion-link svg path {
+  fill: #D80621;
+}
+#canada-page .test-box svg path {
+  fill: #D80621;
+}
+#canada-page .test-bottom {
+  background-image: url(assets/country/test-ca-bottom.png);
+}
+
+/*==================================================================================*/
+/*============================== Qatar Page =====================================*/
+/*==================================================================================*/
+#qatar-page .hero-sec {
+  background-image: url(assets/country/qatar-hero-bg.png);
+}
+#qatar-page .hero-sec .header-text .cnt-text {
+  color: #8A1538;
+}
+#qatar-page .hero-sec .header-text .prm-btn {
+  background-color: #8A1538;
+}
+#qatar-page .accordion-link svg path {
+  fill: #8A1538;
+}
+#qatar-page .test-box svg path {
+  fill: #8A1538;
+}
+#qatar-page .test-bottom {
+  background-image: url(assets/country/test-qt-bottom.png);
+}
+
+/*==================================================================================*/
+/*============================== Malaysia Page =====================================*/
+/*==================================================================================*/
+#malaysia-page .hero-sec {
+  background-image: url(assets/country/malaysia-hero-bg.png);
+}
+#malaysia-page .hero-sec .header-text .cnt-text {
+  color: #0032A0;
+}
+#malaysia-page .hero-sec .header-text .prm-btn {
+  background-color: #0032A0;
+}
+#malaysia-page .accordion-link svg path {
+  fill: #0032A0;
+}
+#malaysia-page .test-box svg path {
+  fill: #0032A0;
+}
+#malaysia-page .test-bottom {
+  background-image: url(assets/country/test-ml-bottom.png);
+}
+
+/*==================================================================================*/
+/*============================== Singapore Page =====================================*/
+/*==================================================================================*/
+#singapore-page .hero-sec {
+  background-image: url(assets/country/singapore-hero-bg.png);
+}
+#singapore-page .hero-sec .header-text .cnt-text {
+  color: #EE2536;
+}
+#singapore-page .hero-sec .header-text .prm-btn {
+  background-color: #EE2536;
+}
+#singapore-page .accordion-link svg path {
+  fill: #EE2536;
+}
+#singapore-page .test-box svg path {
+  fill: #EE2536;
+}
+#singapore-page .test-bottom {
+  background-image: url(assets/country/test-sg-bottom.png);
 }/*# sourceMappingURL=styles.css.map */

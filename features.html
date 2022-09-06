@@ -89,19 +89,45 @@
 
     <!-- Features Page -->
     <div id="features">
+
         <!-- Nav Header Starts -->
         <div class="nav-bar">
             <div class="navbar-holder">
                 <div class="nav-left">
                     <div class="container">
                         <div class="left-holder">
-                            <div class="logo">
+                            <a href="index.html" class="logo">
                                 <img src="assets/logo-white.png" alt="logo">
-                            </div>
+                            </a>
                             <nav>
                                 <ul>
-                                    <li><a href="#" class="nav-item">Features</a></li>
-                                    <li><a href="#" class="nav-item">Tutorials</a></li>
+                                    <li class="drop-down">
+                                        <a class="nav-item">Features
+                                            <svg width="5" height="3" viewBox="0 0 5 3" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                                    fill="#EEEEEE" />
+                                            </svg>
+
+                                        </a>
+                                        <div class="sub-menu-holder">
+                                            <ul class="sub-menu">
+                                                <li><a href="">Client Management</a></li>
+                                                <li><a href="">Billing</a></li>
+                                                <li><a href="">Bio Metric</a></li>
+                                                <li><a href="">Marketing</a></li>
+                                                <li><a href="">Reporting</a></li>
+                                                <li><a href="">Class Booking</a></li>
+                                                <li><a href="">Employees</a></li>
+                                                <li><a href="">Mobile App</a></li>
+                                                <li><a href="">Point of Sale</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="tutorials.html" class="nav-item">Tutorials</a>
+                                    </li>
                                     <li><a href="#" class="nav-item">Blog</a></li>
                                 </ul>
                             </nav>
@@ -135,8 +161,29 @@
         <!-- Mobile Menu Ends-->
         <div class="navbar-mob">
             <ul>
-                <li><a href="">Features</a></li>
-                <li><a href="">Tutorials</a></li>
+                <li class="drop-down-mob">
+                    <label for="mob-drop" href="features.html">Features<svg class="ms-2" width="5" height="3" viewBox="0 0 5 3" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                fill="#333" />
+                        </svg></label>
+                    <input type="checkbox" id="mob-drop">
+                    <div class="mob-menu-holder">
+                        <ul class="sub-menu">
+                            <li><a href="">Client Management</a></li>
+                            <li><a href="">Billing</a></li>
+                            <li><a href="">Bio Metric</a></li>
+                            <li><a href="">Marketing</a></li>
+                            <li><a href="">Reporting</a></li>
+                            <li><a href="">Class Booking</a></li>
+                            <li><a href="">Employees</a></li>
+                            <li><a href="">Mobile App</a></li>
+                            <li><a href="">Point of Sale</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="tutorials.html">Tutorials</a></li>
                 <li><a href="">Blogs</a></li>
                 <li><a href="">FAQs</a></li>
             </ul>
@@ -148,7 +195,9 @@
         <div class="feat-hero">
             <img src="assets/features/feat-hero-stat.png" class="feat-stat-img" alt="">
             <div class="feat-hero-bg">
-                <h1 class="heading-style">Learn how <span class="blue-text">Easy Gym<img src="assets/features/feat-head-lines.png" class="feat-head-lines" alt=""></span><br> can help you grow
+                <h1 class="heading-style">Learn how <span class="blue-text">Easy Gym<img
+                            src="assets/features/feat-head-lines.png" class="feat-head-lines" alt=""></span><br> can
+                    help you grow
                 </h1>
                 <img src="assets/features/feat-hero-img.png" alt="" class="feat-hero-img">
             </div>
@@ -175,7 +224,8 @@
                             <h1 class="heading-style" data-aos="fade-up" data-aos-once="true">
                                 Retain & stay connected with your clients
                             </h1>
-                            <p data-aos="fade-up" data-aos-once="true">Stay connected and take regular feedbacks for nutrition, trials, membership upgrades,
+                            <p data-aos="fade-up" data-aos-once="true">Stay connected and take regular feedbacks for
+                                nutrition, trials, membership upgrades,
                                 renewals, birthday wishes, workout results & almost everything. Regular followups &
                                 feedbacks will help to maintain better client relations and retain more clients. Easy
                                 Gym digitalize your client experience with a signup form on your website, self-check-in
@@ -203,7 +253,8 @@
                             <h1 class="heading-style" data-aos="fade-up" data-aos-once="true">
                                 A single point of information for Customer Service
                             </h1>
-                            <p data-aos="fade-up" data-aos-once="true">Record BMI reports & body measurements in your Gym Management Software. Every-time you
+                            <p data-aos="fade-up" data-aos-once="true">Record BMI reports & body measurements in your
+                                Gym Management Software. Every-time you
                                 record a detail it shows a comparative analysis of the progress of the client in the
                                 software as well as in the mobile app and gives you a trend report of progress made by
                                 the client. Freezing option availability to make things even more convenient for you.
@@ -214,7 +265,13 @@
                                     <label class="accordion-link" for="question1">
                                         <div class="flex">
                                             <h3 class="sm-head">Client list</h3>
-                                            <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
                                         </div>
                                     </label>
                                     <div class="answer">
@@ -231,7 +288,13 @@
                                         <div class="flex">
                                             <h3 class="sm-head">Client personal details & billing and payment history
                                             </h3>
-                                            <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
                                         </div>
                                     </label>
                                     <div class="answer">
@@ -249,7 +312,13 @@
                                         <div class="flex">
                                             <h3 class="sm-head">Customized workout plan
                                             </h3>
-                                            <object data="assets/dumbbell.svg" type="image/svg+xml"></object>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
                                         </div>
                                     </label>
                                     <div class="answer">
@@ -332,13 +401,20 @@
                         <div>
                             <h3>Countries we serve in</h3>
                             <ul class="cnt-list">
-                                <li>USA <object data="assets/us.svg" type="image/svg+xml"></object></li>
-                                <li>Canada <object data="assets/ca.svg" type="image/svg+xml"></object></li>
-                                <li>Africa <object data="assets/za.svg" type="image/svg+xml"></object></li>
-                                <li>Qatar <object data="assets/qa.svg" type="image/svg+xml"></object></li>
-                                <li>India <object data="assets/in.svg" type="image/svg+xml"></object></li>
-                                <li>Malaysia <object data="assets/my.svg" type="image/svg+xml"></object></li>
-                                <li>Singapore <object data="assets/sg.svg" type="image/svg+xml"></object></li>
+                                <li><a href="usa.html">USA <object data="assets/us.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="canada.html">Canada <object data="assets/ca.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="africa.html">Africa <object data="assets/za.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="qatar.html">Qatar <object data="assets/qa.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="index.html">India <object data="assets/in.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="malaysia.html">Malaysia <object data="assets/my.svg"
+                                            type="image/svg+xml"></object></a></li>
+                                <li><a href="singapore.html">Singapore <object data="assets/sg.svg"
+                                            type="image/svg+xml"></object></a></li>
                             </ul>
                         </div>
                     </div>
