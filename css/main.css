@@ -2185,6 +2185,17 @@ footer input.form-control:focus {
     margin-bottom: 30px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  .soft-page .soft-hero {
+    display: block;
+    height: auto;
+    padding-top: 140px;
+    margin-bottom: 100px;
+  }
+  .soft-page .sec .sec-img {
+    margin-bottom: 30px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .soft-page .soft-hero .heading-style {
     font-size: 35px;
