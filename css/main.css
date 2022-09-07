@@ -1,4 +1,4 @@
-@import url(fonts/gilroy/font-gilroy.css);
+@import url(../fonts/gilroy/font-gilroy.css);
 /*================ Global CSS =================*/
 * {
   margin: 0;
@@ -919,7 +919,7 @@ p {
   background: #fff;
   content: "";
   display: block;
-  height: 3px;
+  height: 3.5px;
   border-radius: 3px;
   margin: 7px 0;
   transition: 0.5s;
@@ -941,12 +941,12 @@ p {
 
 /*================ Mobile Menu ===============*/
 .navbar-mob > ul {
-  width: 60%;
+  width: 65%;
   height: 100vh;
   background: #fff;
   position: absolute;
   top: 0;
-  left: -60%;
+  left: -65%;
   color: #fff;
   z-index: 9999;
   padding: 100px 50px;
@@ -979,6 +979,7 @@ p {
   color: #666;
 }
 .navbar-mob.active ul {
+  box-shadow: 5px 0 40px 10px rgba(0, 0, 0, 0.1);
   transition: all ease 0.3s;
   left: 0;
 }
@@ -993,14 +994,14 @@ p {
   color: #fff;
   display: flex;
   align-items: center;
-  background-image: url(assets/hero-bg.png);
+  background-image: url(../assets/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50px;
 }
 .hero-sec .hero-right {
   flex-basis: 40%;
-  background-image: url(assets/hero-right-bg.png);
+  background-image: url(../assets/hero-right-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1081,7 +1082,7 @@ p {
 /*=================== QR Section =======================*/
 .qr-sec {
   padding: 100px 0;
-  background-image: url(assets/qr-bg.png);
+  background-image: url(../assets/qr-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1179,7 +1180,7 @@ p {
 /*=============== Social Section ================*/
 .social-sec {
   padding: 70px 0;
-  background-image: url(assets/social-sec-bg.png);
+  background-image: url(../assets/social-sec-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1209,7 +1210,7 @@ p {
 /*=============== Social Section ================*/
 .retain-sec {
   padding: 70px 0;
-  background-image: url(assets/social-sec-bg.png);
+  background-image: url(../assets/social-sec-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1461,7 +1462,7 @@ p {
 .testimonial-sec .test-bottom {
   width: 100%;
   height: 200px;
-  background: url(assets/test-bottom.png);
+  background: url(../assets/test-bottom.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -1618,7 +1619,7 @@ footer input.form-control:focus {
   }
   .nav-bar .left-holder {
     display: block;
-    width: 95px;
+    width: 94px;
   }
   .nav-bar .logo {
     width: 100px;
@@ -1677,7 +1678,7 @@ footer input.form-control:focus {
 }
 .feat-hero .feat-hero-bg {
   height: 75vh;
-  background-image: url(assets/features/feat-hero-bg.png);
+  background-image: url(../assets/features/feat-hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
@@ -1855,7 +1856,7 @@ footer input.form-control:focus {
 /*==================================================================================*/
 .tuts-hero {
   height: 100vh;
-  background: url(assets/features/feat-hero-bg.png);
+  background: url(../assets/features/feat-hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom;
@@ -1946,7 +1947,7 @@ footer input.form-control:focus {
 #usa-page .hero-sec,
 .cnt-page .hero-sec {
   height: 100vh;
-  background-image: url(assets/country/usa-hero-bg.png);
+  background-image: url(../assets/country/usa-hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
@@ -2007,7 +2008,7 @@ footer input.form-control:focus {
 }
 #usa-page .test-bottom,
 .cnt-page .test-bottom {
-  background-image: url(assets/country/test-us-bottom.png);
+  background-image: url(../assets/country/test-us-bottom.png);
 }
 
 @media only screen and (max-width: 767px) {
@@ -2023,7 +2024,7 @@ footer input.form-control:focus {
 /*============================== Africa Page =====================================*/
 /*==================================================================================*/
 #africa-page .hero-sec {
-  background-image: url(assets/country/africa-hero-bg.png);
+  background-image: url(../assets/country/africa-hero-bg.png);
 }
 #africa-page .hero-sec .header-text .cnt-text {
   color: #00843E;
@@ -2038,14 +2039,14 @@ footer input.form-control:focus {
   fill: #00843E;
 }
 #africa-page .test-bottom {
-  background-image: url(assets/country/test-af-bottom.png);
+  background-image: url(../assets/country/test-af-bottom.png);
 }
 
 /*==================================================================================*/
 /*============================== Canada Page =====================================*/
 /*==================================================================================*/
 #canada-page .hero-sec {
-  background-image: url(assets/country/canada-hero-bg.png);
+  background-image: url(../assets/country/canada-hero-bg.png);
 }
 #canada-page .hero-sec .header-text .cnt-text {
   color: #D80621;
@@ -2060,14 +2061,14 @@ footer input.form-control:focus {
   fill: #D80621;
 }
 #canada-page .test-bottom {
-  background-image: url(assets/country/test-ca-bottom.png);
+  background-image: url(../assets/country/test-ca-bottom.png);
 }
 
 /*==================================================================================*/
 /*============================== Qatar Page =====================================*/
 /*==================================================================================*/
 #qatar-page .hero-sec {
-  background-image: url(assets/country/qatar-hero-bg.png);
+  background-image: url(../assets/country/qatar-hero-bg.png);
 }
 #qatar-page .hero-sec .header-text .cnt-text {
   color: #8A1538;
@@ -2082,14 +2083,14 @@ footer input.form-control:focus {
   fill: #8A1538;
 }
 #qatar-page .test-bottom {
-  background-image: url(assets/country/test-qt-bottom.png);
+  background-image: url(../assets/country/test-qt-bottom.png);
 }
 
 /*==================================================================================*/
 /*============================== Malaysia Page =====================================*/
 /*==================================================================================*/
 #malaysia-page .hero-sec {
-  background-image: url(assets/country/malaysia-hero-bg.png);
+  background-image: url(../assets/country/malaysia-hero-bg.png);
 }
 #malaysia-page .hero-sec .header-text .cnt-text {
   color: #0032A0;
@@ -2104,14 +2105,14 @@ footer input.form-control:focus {
   fill: #0032A0;
 }
 #malaysia-page .test-bottom {
-  background-image: url(assets/country/test-ml-bottom.png);
+  background-image: url(../assets/country/test-ml-bottom.png);
 }
 
 /*==================================================================================*/
 /*============================== Singapore Page =====================================*/
 /*==================================================================================*/
 #singapore-page .hero-sec {
-  background-image: url(assets/country/singapore-hero-bg.png);
+  background-image: url(../assets/country/singapore-hero-bg.png);
 }
 #singapore-page .hero-sec .header-text .cnt-text {
   color: #EE2536;
@@ -2126,5 +2127,68 @@ footer input.form-control:focus {
   fill: #EE2536;
 }
 #singapore-page .test-bottom {
-  background-image: url(assets/country/test-sg-bottom.png);
-}/*# sourceMappingURL=styles.css.map */
+  background-image: url(../assets/country/test-sg-bottom.png);
+}
+
+/*==================================================================================*/
+/*============================== Software Page =====================================*/
+/*==================================================================================*/
+.soft-page .nav-bar .left-holder ul,
+.soft-page .nav-bar .nav-right ul {
+  color: #333;
+  font-weight: 600;
+}
+.soft-page .nav-bar .left-holder ul .prm-btn,
+.soft-page .nav-bar .nav-right ul .prm-btn {
+  border-width: 2px;
+  border-color: #333;
+  color: #333;
+  font-weight: 600;
+}
+.soft-page .nav-bar .hamburger .center:before,
+.soft-page .nav-bar .hamburger .center:after,
+.soft-page .nav-bar .hamburger .center div {
+  background: #333;
+}
+.soft-page .soft-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.soft-page .soft-hero .heading-style {
+  font-size: 55px;
+}
+.soft-page .soft-hero .blue-text {
+  color: #1562D9;
+  font-weight: 700;
+}
+.soft-page .soft-hero .prm-btn {
+  margin-top: 50px;
+}
+.soft-page .soft-hero .prm-btn:hover {
+  color: #fff;
+}
+.soft-page .sec {
+  padding: 70px 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .soft-page .soft-hero {
+    display: block;
+    height: auto;
+    padding-top: 140px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .soft-page .sec .sec-img {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .soft-page .soft-hero .heading-style {
+    font-size: 35px;
+  }
+  .soft-page .sec .heading-style {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=main.css.map */

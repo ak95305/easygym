@@ -55,27 +55,6 @@ $(window).on('resize scroll', function () {
         console.log($('.qr-img').css('margin-left'));
 
 
-    // }
-
-
-
-    // if ($('.retain-sec').isInViewport()) {
-
-
-    //     // console.log($('#retain-svg')[0]);
-    //     if(!$('#retain-svg > svg')[0] && $(window).scrollTop() > $('.retain-sec').offset().top-150){
-    //         // Retain Client SVG
-    //         var animation = bodymovin.loadAnimation({
-    //             container: document.getElementById('retain-svg'), // Required
-    //             path: 'assets/svg-json/data.json', // Required
-    //             renderer: 'svg', // Required
-    //             loop: false, // Optional
-    //             autoplay: true, // Optional
-    //         })
-    //         // console.log(document.querySelectorAll('#retain-svg svg'));
-    //     }
-    // }
-
 });
 
 

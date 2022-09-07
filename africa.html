@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
 
 
     <title>Easy Gym Software</title>
@@ -100,8 +100,33 @@
                             </a>
                             <nav>
                                 <ul>
-                                    <li><a href="features.html" class="nav-item">Features</a></li>
-                                    <li><a href="tutorials.html" class="nav-item">Tutorials</a></li>
+                                    <li class="drop-down">
+                                        <a class="nav-item">Features
+                                            <svg width="5" height="3" viewBox="0 0 5 3" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                                    fill="#333" />
+                                            </svg>
+
+                                        </a>
+                                        <div class="sub-menu-holder">
+                                            <ul class="sub-menu">
+                                                <li><a href="">Client Management</a></li>
+                                                <li><a href="">Billing</a></li>
+                                                <li><a href="">Bio Metric</a></li>
+                                                <li><a href="">Marketing</a></li>
+                                                <li><a href="">Reporting</a></li>
+                                                <li><a href="">Class Booking</a></li>
+                                                <li><a href="">Employees</a></li>
+                                                <li><a href="">Mobile App</a></li>
+                                                <li><a href="">Point of Sale</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="tutorials.html" class="nav-item">Tutorials</a>
+                                    </li>
                                     <li><a href="#" class="nav-item">Blog</a></li>
                                 </ul>
                             </nav>
@@ -135,7 +160,28 @@
         <!-- Mobile Menu Ends-->
         <div class="navbar-mob">
             <ul>
-                <li><a href="features.html">Features</a></li>
+                <li class="drop-down-mob">
+                    <label for="mob-drop" href="features.html">Features<svg class="ms-2" width="5" height="3" viewBox="0 0 5 3" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                fill="#333" />
+                        </svg></label>
+                    <input type="checkbox" id="mob-drop">
+                    <div class="mob-menu-holder">
+                        <ul class="sub-menu">
+                            <li><a href="">Client Management</a></li>
+                            <li><a href="">Billing</a></li>
+                            <li><a href="">Bio Metric</a></li>
+                            <li><a href="">Marketing</a></li>
+                            <li><a href="">Reporting</a></li>
+                            <li><a href="">Class Booking</a></li>
+                            <li><a href="">Employees</a></li>
+                            <li><a href="">Mobile App</a></li>
+                            <li><a href="">Point of Sale</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="tutorials.html">Tutorials</a></li>
                 <li><a href="">Blogs</a></li>
                 <li><a href="">FAQs</a></li>

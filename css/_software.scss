@@ -1,0 +1,82 @@
+/*==================================================================================*/
+/*============================== Software Page =====================================*/
+/*==================================================================================*/
+.soft-page {
+
+    .nav-bar .left-holder ul,
+    .nav-bar .nav-right ul {
+        color: #333;
+        font-weight: 600;
+
+        .prm-btn {
+            border-width: 2px;
+            border-color: #333;
+            color: #333;
+            font-weight: 600;
+        }
+
+    }
+
+    .nav-bar .hamburger .center:before,
+    .nav-bar .hamburger .center:after,
+    .nav-bar .hamburger .center div {
+        background: #333;
+    }
+
+
+    .soft-hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+
+        .heading-style {
+            font-size: 55px;
+        }
+
+        .blue-text {
+            color: #1562D9;
+            font-weight: 700;
+        }
+
+        .prm-btn {
+            margin-top: 50px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .sec {
+        padding: 70px 0;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 991px) {
+    .soft-page .soft-hero {
+        display: block;
+        height: auto;
+        padding-top: 140px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .soft-page .sec .sec-img{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .soft-page .soft-hero .heading-style{
+        font-size: 35px;
+    }
+    .soft-page .sec .heading-style{
+        font-size: 25px;
+    }
+}
