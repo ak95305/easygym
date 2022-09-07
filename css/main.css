@@ -2155,6 +2155,7 @@ footer input.form-control:focus {
   height: 100vh;
   display: flex;
   align-items: center;
+  margin-top: 25px;
 }
 .soft-page .soft-hero .heading-style {
   font-size: 55px;
