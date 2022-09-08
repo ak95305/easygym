@@ -2249,6 +2249,11 @@ footer input.form-control:focus {
     margin-bottom: 50px;
   }
 }
+@media only screen and (min-width: 991px) {
+  .hero-img {
+    margin-top: 50px;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .soft-page .soft-hero {
     display: block;
